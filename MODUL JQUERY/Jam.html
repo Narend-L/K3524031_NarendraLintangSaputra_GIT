@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAM</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <button id="tampil">Tampilkan Jam</button>
+    <span id="tampilanJam"></span>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            // Selector #tampil sekarang akan menemukan tombol
+            $('#tampil').click(function(){
+                // Mulai interval update jam
+                setInterval(function(){
+                    var date = new Date()
+                    // Selector #tampilanJam sekarang akan menemukan span
+                    $('#tampilanJam').html("Jam sekarang: " + date.toLocaleTimeString());
+                }, 1000);
+            });
+        });
+    </script>
+</body>
+</html>
