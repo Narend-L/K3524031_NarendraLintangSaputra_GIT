@@ -1,0 +1,58 @@
+<!-- GABUNGAN SMARTPHONE DAN LEBIH DARI 1024px -->
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Menggunakan media Query CSS3</title>
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+
+    <style>
+        .lebih1024{
+            display: none;
+        }
+
+        .smartphone{
+            display: none;
+        }
+
+        @media screen and (max-width: 767px){
+            body{
+            background-color: yellow;
+            }
+
+            .smartphone{
+            display: block;
+            }
+
+            .lebih1024{
+                display: none;
+            }
+        }
+
+        @media screen and (min-width: 1024px){
+            body{
+            background-color: cyan;           
+            }
+
+            .lebih1024{
+            display: block;
+            }
+
+            .smartphone{
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h3>Menggunakan Media Query CSS 3</h3>
+    <div class="smartphone">
+        <h2>Terdeteksi ukuran smartphone</h2>
+    </div>
+    <div class="lebih1024">
+        <h2>Terdeteksi lebih dari 1024px</h2>
+    </div>
+
+</body>
+</html>
