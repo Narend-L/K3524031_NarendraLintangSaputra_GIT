@@ -1,0 +1,30 @@
+.highlighted {
+    color: red;
+    background-color: yellow;
+    font-weight: bold;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 8px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+}
