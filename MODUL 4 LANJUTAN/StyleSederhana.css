@@ -1,0 +1,213 @@
+:root {
+    --bg-dark: #121212;
+    --accent-yellow: #FFD700;
+    --search-bg: #2d2d2d;
+    --text-light: #ffffff;
+    --text-placeholder: #ccc;
+    --navbar-bg: #1a1a1a;
+    --accent-yellow: #FFD700; 
+    --text-inactive: #a0a0a0; 
+    --hover-bg: #303030;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+}
+
+.navbar {
+    position: sticky;
+    background-color: var(--navbar-bg);
+    padding: 10px 20px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+}
+
+.logo {
+    font-size: 24px;
+    color: var(--accent-yellow);
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+
+.search-container {
+    position: sticky;
+    margin: auto;
+    flex-grow: 1;
+    max-width: 1000px;
+    top: 0;
+}
+
+.search-bar {
+    position: sticky;
+    display: flex;
+    align-items: center;
+    background-color: var(--search-bg);
+    border-radius: 8px; 
+    padding: 8px 15px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    top: 0;
+}
+
+.search-icon {
+    color: var(--accent-yellow); 
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.search-bar input[type="text"] {
+    flex-grow: 1; 
+    border: none;
+    background: transparent;
+    color: var(--text-light);
+    font-size: 16px;
+    padding: 0;
+    outline: none; 
+}
+
+.search-bar input::placeholder {
+    color: var(--text-placeholder); 
+    opacity: 0.8;
+}
+
+
+.secondary-navbar {
+    position: sticky;
+    background-color: var(--navbar-bg); 
+    margin: 0;
+    padding: 10px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #333;
+    top: 52px;
+}
+
+.nav-links-left,
+.nav-links-right {
+    display: flex;
+    align-items: center;
+}
+
+.nav-item {
+    color: var(--text-light);
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-right: 10px;
+    transition: background-color 0.2s;
+}
+
+.nav-item:hover {
+    background-color: var(--hover-bg);
+    color: var(--text-light);
+}
+
+.nav-links-right .nav-item i {
+    margin-right: 5px;
+    color: var(--accent-yellow);
+}
+
+.nav-links-right .nav-item:last-child {
+    margin-right: 0;
+}
+
+.hero-container {
+    width: 90%; 
+    padding: 50px 0;
+    margin: 0 auto; 
+}
+
+.hero-image {
+    max-width: 75%; 
+    height: auto; 
+    display: block;
+    margin: 0 auto;
+    border-radius: 15px;
+}
+
+.product-grid-section {
+    padding: 20px 40px 50px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: var(--text-light);
+}
+
+.product-grid-section h2 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.product-grid-section .subtitle {
+    color: var(--text-placeholder);
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    padding-bottom: 60%; 
+    height: 0; 
+}
+
+
+.card-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.7); 
+    transition: filter 0.3s;
+}
+.product-card:hover .card-image {
+    filter: brightness(0.9);
+}
+.mobile-legends {
+    background-image: url('d:/download/Mole logo.jpg');
+}
+.roblox-voucher {
+    background-image: url('d:/download/Roblox logo.jpg');
+}
+
+.card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to right, var(--accent-yellow), #ffee7f); 
+    color: var(--bg-dark); 
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.product-name {
+    white-space: nowrap;
+    overflow: hidden;
+    flex-grow: 1; 
+    margin-right: 10px; 
+    min-width: 0; 
+}
